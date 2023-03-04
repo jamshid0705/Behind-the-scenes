@@ -1,4 +1,4 @@
-// 'use strict';
+'use strict';
 
 //////////// scoping in practice ////////////////
 // function information(birtYear){
@@ -39,16 +39,36 @@
 // console.log(window)
 
 // functions
-console.log(dec(2,9))
+// console.log(dec(2,9))
 
-function dec(a,b){
-  return a+b
+// function dec(a,b){
+//   return a+b
+// }
+
+// ex=function(a,b){
+//   return a+b
+// }
+
+// const arrow=(a,b)=>a+b
+// console.log(ex(3, 8));
+// console.log(window);
+// console.log(window.this)
+
+//////////// this keyword /////////////
+
+console.log(this)
+const a=function(){
+  console.log(this)
 }
+a()
 
-ex=function(a,b){
-  return a+b
+// faqat arrow functionda this otasiga murojat qila oladi
+const b=()=>{
+  console.log(this)
 }
+b()
 
-const arrow=(a,b)=>a+b
-console.log(ex(3, 8));
-console.log(window);
+function c(){
+  console.log(this)
+}
+c()

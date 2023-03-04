@@ -25,7 +25,6 @@
 // const firstname = 'Jamshid';
 // information(2000)
 
-
 /////////////// Hoisting and TDZ in practice ///////////////
 // variables
 // console.log(varExam)
@@ -55,20 +54,29 @@
 // console.log(window.this)
 
 //////////// this keyword /////////////
+// function
+// console.log(this)
+// const a=function(){
+//   console.log(this)
+// }
+// a()
 
-console.log(this)
-const a=function(){
-  console.log(this)
-}
-a()
+// // faqat arrow functionda this otasiga murojat qila oladi
+// const b=()=>{
+//   console.log(this)
+// }
+// b()
 
-// faqat arrow functionda this otasiga murojat qila oladi
-const b=()=>{
-  console.log(this)
-}
-b()
-
-function c(){
-  console.log(this)
-}
-c()
+// function c(){
+//   console.log(this)
+// }
+// c()
+// objects
+const jamshid = {
+  year: 2023,
+  calcage: function () {
+    console.log(this);
+    console.log(this.year-2000)
+  },
+};
+jamshid.calcage();

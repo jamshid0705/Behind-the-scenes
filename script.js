@@ -127,5 +127,26 @@ let obj1={
 
 let obj2=obj1
 obj2.name="shamshod"
+obj2.fullname="xatamov jamshid"
 console.log('obj2',obj2)
 console.log("obj1",obj1)
+obj2={
+  fullname:'xatamov jamshid'
+}
+console.log(obj2)
+
+// copying objects 
+const jamshid={
+  name:'jamshid',
+  fullname:'xatamovjamshid',
+  age:22,
+  family:['jamshid',"shamshod",'xurshid']
+}
+
+const shamshod=Object.assign({},jamshid) // objectdan copy olib yangi joy va adress ochadi heap dan
+shamshod.name='shamshod',
+shamshod.fullname='xatamovshamshod',
+shamshod.age=17,
+shamshod.family=['shamshod'] // lekin push qilinsa ikkalasiga ham qo'shiladi
+console.log(jamshid)
+console.log(shamshod)

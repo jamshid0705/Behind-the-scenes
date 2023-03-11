@@ -56,7 +56,7 @@
 //////////// this keyword /////////////
 // function
 // console.log(this)
-// const a=function(){
+// const a=()=>{
 //   console.log(this)
 // }
 // a()
@@ -82,38 +82,50 @@
 // jamshid.calcage();
 
 /////////////////// regular and arrow functions ////////////////
-var firstName = 'jamshid';
-const obj = {
-  firstName: 'Jamshid',
-  age: 23,
-  fullname: function () {
-    console.log(`Xatamov ${this.firstName}`);
+// var firstName = 'jamshid';
+// const obj = {
+//   firstName: 'Jamshid',
+//   age: 23,
+//   fullname: function () {
+//     console.log(`Xatamov ${this.firstName}`);
     
-    // regular function
-    const a = obj;
-    const isMillenial=function(){
-      console.log(a)
-      console.log(a.age)
-    }
-    isMillenial()
+//     // regular function
+//     const a = obj;
+//     const isMillenial=function(){
+//       console.log(a)
+//       console.log(a.age)
+//     }
+//     isMillenial()
 
-    // arrow function
-    const isMillenial1=()=>{
-      console.log(this)
-      console.log(this.age)
-    }
-    isMillenial1()
-  },
-  obj1: {
-    firstName: 'shamshod',
-    obj2: {
-      information: () => {
-        console.log(`${this.firstName} is ${this.age}`);
-        console.log(this);
-      },
-    },
-  },
-};
+//     // arrow function
+//     const isMillenial1=()=>{
+//       console.log(this)
+//       console.log(this.age)
+//     }
+//     isMillenial1()
+//   },
+//   obj1: {
+//     firstName: 'shamshod',
+//     obj2: {
+//       information: () => {
+//         console.log(`${this.firstName} is ${this.age}`);
+//         console.log(this);
+//       },
+//     },
+//   },
+// };
 
-obj.fullname();
-obj.obj1.obj2.information();
+// obj.fullname();
+// obj.obj1.obj2.information();
+
+/////////////////// primitives and objects /////////////////
+
+let obj1={
+  name:"jamshid",
+  age:22
+}
+
+let obj2=obj1
+obj2.name="shamshod"
+console.log('obj2',obj2)
+console.log("obj1",obj1)

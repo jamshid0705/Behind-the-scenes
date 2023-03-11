@@ -72,11 +72,48 @@
 // }
 // c()
 // objects
-const jamshid = {
-  year: 2023,
-  calcage: function () {
-    console.log(this);
-    console.log(this.year-2000)
+// const jamshid = {
+//   year: 2023,
+//   calcage: function () {
+//     console.log(this);
+//     console.log(this.year-2000)
+//   },
+// };
+// jamshid.calcage();
+
+/////////////////// regular and arrow functions ////////////////
+var firstName = 'jamshid';
+const obj = {
+  firstName: 'Jamshid',
+  age: 23,
+  fullname: function () {
+    console.log(`Xatamov ${this.firstName}`);
+    
+    // regular function
+    const a = obj;
+    const isMillenial=function(){
+      console.log(a)
+      console.log(a.age)
+    }
+    isMillenial()
+
+    // arrow function
+    const isMillenial1=()=>{
+      console.log(this)
+      console.log(this.age)
+    }
+    isMillenial1()
+  },
+  obj1: {
+    firstName: 'shamshod',
+    obj2: {
+      information: () => {
+        console.log(`${this.firstName} is ${this.age}`);
+        console.log(this);
+      },
+    },
   },
 };
-jamshid.calcage();
+
+obj.fullname();
+obj.obj1.obj2.information();
